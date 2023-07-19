@@ -90,7 +90,3 @@ export default function GamePage(){
 		</div>
 	</>;
 }
-
-export const metadata = {
-	title: "play lang.which"
-};

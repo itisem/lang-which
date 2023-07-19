@@ -50,7 +50,10 @@ export default function SettingsPage(){
 						<u>medium</u> includes any official national language, as well as minority languages with at least 5 million speakers.
 					</li>
 					<li>
-						<u>hard</u> includes any language with a clip submitted for it.
+						<u>hard</u> includes any language with at least 100k speakers.
+					</li>
+					<li>
+						<u>extreme</u> includes any language with a submitted clip.
 					</li>
 				</ul>
 			</section>
@@ -71,8 +74,4 @@ export default function SettingsPage(){
 			</section>
 		</section>
 	</>
-}
-
-export const metadata = {
-	title: "settings | lang.which"
 }
