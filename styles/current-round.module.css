@@ -1,0 +1,128 @@
+@keyframes appear{
+	0%{
+		opacity: 0%;
+		transform: scale(1, 0) translateX(-50vw);
+		transform-origin: top left;
+	}
+	100%{
+		opacity: 100%;
+		transform: scale(1, 1) translateX(0);
+		transform-origin: top left;
+	}
+}
+
+.slider{
+	--thumb-height: 12px;
+	--thumb-width: 12px;
+	--bar-height: 10px;
+}
+
+.video{
+	display: none;
+}
+
+.text, .map{
+	animation-name: appear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+}
+
+.map{
+	max-width: 800px;
+	max-height: 500px;
+	display: block;
+	margin: 0 auto;
+}
+
+.clues{
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 80%;
+}
+
+.controls{
+	margin: 0 auto;
+	height: 20px;
+	margin-bottom: 5px;
+}
+
+.play, .pause{
+	height: 20px;
+	width: 20px;
+	float: left;
+	transition: all 0.2s;
+	cursor: pointer;
+	margin-top: 1px;
+}
+
+.play:hover, .pause:hover{
+	filter: brightness(80%);
+}
+
+.play{
+	background: url("/play.svg");
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+}
+
+.pause{
+	background: url("/pause.svg");
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+}
+
+/* removing default styling and adding some transitions */
+.slider{
+	width: calc(100% - 25px);
+	background: transparent;
+	appearance: none;
+	-webkit-appearance: none;
+	border-radius: 10px;
+	transition: all 0.2s;
+	overflow: hidden;
+	float: right;
+	cursor: pointer;
+
+	--track-size: 15px;
+}
+
+.slider:active{
+	cursor: grabbing;
+}
+
+.slider::-moz-range-track{
+	background: var(--light-highlight);
+	height: var(--track-size);
+	border-radius: var(--track-size);
+}
+
+.slider::-webkit-slider-runnable-track{
+	background: var(--light-highlight);
+	height: var(--track-size);
+	border-radius: var(--track-size);
+}
+
+.slider::-moz-range-thumb{
+	height: var(--track-size);
+	width: var(--track-size);
+	background-color: var(--highlight);
+	border-radius: 50%;
+	border: 1px solid var(--highlight);
+	box-shadow: -2007px 0 0 2000px var(--highlight);
+}
+
+.slider::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	appearance: none;
+	height: var(--size);
+	width: var(--size);
+	background-color: var(--highlight);
+	border-radius: 50%;
+	border: 1px solid var(--highlight);
+	box-shadow: -2007px 0 0 2000px var(--highlight);
+}
+
+.slider:active::-moz-range-track, .slider:active::-moz-range-thumb{
+	filter: brightness(80%) !important;
+}

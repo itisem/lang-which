@@ -1,0 +1,30 @@
+.guess{
+	font-size: 1.3em;
+	background: var(--light-highlight);
+	border: 1px solid var(--highlight);
+	border-radius: 10px;
+	padding: 5px;
+	width: 100%;
+}
+
+.guessbox, .suggested{
+	margin: 0 auto;
+	width: 80%;
+}
+
+.suggested{
+	margin-top: 5px;
+	height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.suggested div{
+	display: inline-block;
+	margin: 0px 3px;
+	padding: 3px;
+	border-radius: 3px;
+	background-color: var(--light-highlight);
+	border: 1px solid var(--highlight);
+	cursor: pointer;
+}

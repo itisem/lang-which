@@ -1,0 +1,18 @@
+.container, .footer{
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.header{
+	
+}
+
+.header input{
+	display: none;
+}
+
+.footer{
+	margin-top: 50px;
+	padding-top: 10px;
+	border-top: 1px solid var(--light);
+}

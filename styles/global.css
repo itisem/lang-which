@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+:root{
+	--background: #f8efe5;
+	--highlight: #bb6622;
+	--alt-highlight: #904e1a;
+	--light-highlight: #d6a37a;
+	--text: #282120;
+	--light: #e0e5e6;
+	--alt-light: #ffffff;
+}
+
+body{
+	background: var(--background);
+	color: var(--text);
+	font-family: Rubik, sans-serif;
+}
+
+a{
+	color: var(--highlight);
+	text-decoration: none;
+	transition: 0.2s color;
+}
+
+a:hover{
+	color: var(--alt-highlight);
+}
+
+h1, h2{
+	color: var(--highlight);
+	text-align: center;
+}
+
+h2:before, h2:after{
+	content: "";
+	vertical-align: middle;
+	display: inline-block;
+	height: 1px;
+	width: 20px;
+	background: var(--highlight);
+}
+
+h2:before{
+	margin-right: 5px;
+}
+
+h2:after{
+	margin-left: 5px;
+}
+
+.highlight{
+	color: var(--highlight);
+}
+
+p{
+	text-align: justify;
+	margin: 0 auto;
+}
+
+summary{
+	cursor: pointer;
+	font-weight: bold;
+	padding-top: 1rem;
+	padding-left: 2rem;
+	position: relative;
+	list-style-type: none;
+	transition: 0.2s margin-bottom;
+}
+
+details > summary::-webkit-details-marker{
+	display: none;
+}
+
+summary:before {
+	/* adding a triangle as content is not enough because it's unaffected by transform */
+	content: "";
+	border-top: 0.4rem solid transparent;
+	border-bottom: 0.4rem solid transparent;
+	border-left: 0.4rem solid var(--text);
+	position: absolute;
+	top: 1.3rem;
+	left: 1rem;
+	transform: rotate(0);
+	transition: 0.2s transform;
+}
+
+details[open] > summary:before {
+	transform: rotate(90deg);
+}
+
+details[open] > summary ~ *{
+	animation: 0.2s sweep-in forwards;
+}
+
+@keyframes sweep-in{
+	0%{
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
