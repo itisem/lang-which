@@ -22,19 +22,19 @@ export default function Layout({children}: LayoutProps){
 						<Link href = "/"><b>lang.which</b></Link>
 					</li>
 					<li>
-						<Link href = "/statistics">statistics</Link>
-					</li>
-					<li>
-						<Link href = "/about">about</Link>
-					</li>
-					<li>
-						<Link href = "/submit">submit</Link>
+						<Link href = "/play">play</Link>
 					</li>
 					<li>
 						<Link href = "/settings">settings</Link>
 					</li>
 					<li>
-						<Link href = "/play">play</Link>
+						<Link href = "/submit">submit</Link>
+					</li>
+					<li>
+						<Link href = "/statistics">statistics</Link>
+					</li>
+					<li>
+						<Link href = "/about">about</Link>
 					</li>
 				</menu>
 			</header>
