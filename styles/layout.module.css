@@ -3,16 +3,55 @@
 	margin: 0 auto;
 }
 
-.header{
-	
+.container{
+	margin-top: 5px;
 }
 
-.header input{
-	display: none;
+.header{
+	margin: 0px;
 }
 
 .footer{
 	margin-top: 50px;
 	padding-top: 10px;
 	border-top: 1px solid var(--light);
+}
+
+.menu{
+	list-style-type: none;
+	display: none;
+	transition: transform 0.2s;
+	transform: translateX(-100vw);
+}
+
+.menu a{
+	color: var(--background);
+}
+
+.menu a:hover{
+	color: var(--light);
+}
+
+@media(min-width: 1200px){
+	.menu{
+		display: block;
+		transform: translateX(0px);
+		height: 20px;
+		top: 0px;
+		width: 100vw;
+		background: var(--highlight);
+	}
+
+	.menu li{
+		float: right;
+		margin: 0px 10px;
+	}
+
+	.menu li:first-child{
+		float: left;
+	}
+
+	.lines, .checkbox{
+		display: none;
+	}
 }

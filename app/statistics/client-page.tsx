@@ -1,6 +1,7 @@
 "use client";
 
 import {useState, useEffect} from "react";
+import Link from "next/link";
 import supabase from "../../lib/supabase";
 import settingsStyles from "../../styles/settings.module.css";
 import styles from "../../styles/statistics.module.css";
@@ -35,9 +36,9 @@ export default function LanguageStatistics(){
 		const textsPromise = supabase.rpc("text_statistics").then(
 			x => setTextStatistics(sumDifficulties(x.data))
 		);
-		Promise.allSettled([languagesPromise, videosPromise, textsPromise]).then(() => {
-			setLoading(false)
-		});
+		Promise.allSettled([languagesPromise, videosPromise, textsPromise]).then(
+			() => setLoading(false)
+		);
 	}, []);
 
 	if(loading) return <>
@@ -49,6 +50,9 @@ export default function LanguageStatistics(){
 
 	return <>
 		<h1>statistics</h1>
+		<p>
+				lang.which contains user-submitted video and text snippets across a large variety of languages. in the table underneath, you can find a breakdown of the currently approved clues, separated by difficulty level:
+			</p>
 		<table className = {styles.statistics}>
 			<tbody>
 				<tr>
@@ -69,6 +73,7 @@ export default function LanguageStatistics(){
 				}
 			</tbody>
 		</table>
+		<p>if you want to help increase these numbers, you can <Link href = "/submit">submit a clue</Link> yourself!</p>
 	</>
 }
 

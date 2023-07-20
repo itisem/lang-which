@@ -23,7 +23,7 @@
 
 .play{
 	background: var(--highlight);
-	color: var(--light);
+	color: var(--background);
 	transition: 0.2s background;
 }
 

@@ -18,7 +18,6 @@ const defaultCallback = x => x;
 export default function RadioButtonGroup({buttons, defaultValue, callback, name}: RadioButtonGroupProps){
 	const [value, setValue] = useState(defaultValue);
 	callback = callback ?? defaultCallback;
-	useEffect(() => setValue(defaultValue), [defaultValue]);
 	return <>{
 		buttons.map(x => 
 			<div className = {styles.button} key={x.value}>
