@@ -1,0 +1,7 @@
+.correct .highlight{
+	color: var(--correct);
+}
+
+.incorrect{
+	color: var(--incorrect);
+}

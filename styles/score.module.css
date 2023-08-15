@@ -1,0 +1,18 @@
+.score{
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.streak{
+	text-align: right;
+	float: right;
+}
+
+.small{
+	font-size: 0.8em;
+}
+
+.score, .streak{
+	color: var(--highlight);
+}

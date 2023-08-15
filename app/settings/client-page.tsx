@@ -6,7 +6,7 @@ import RadioButtonGroup from "../../components/radio-button-group";
 import styles from "../../styles/settings.module.css";
 import {defaultDifficulty, defaultAllClues} from "../../lib/default-settings";
 import getItem from "../../lib/get-item";
-import homeStyles from "../../styles/homepage.module.css";
+import playStyles from "../../styles/play-buttons.module.css";
 import difficultyNumbers from "../../lib/difficulty-numbers";
 
 const difficultyButtons = Object.keys(difficultyNumbers).map(value => ({value}));
@@ -67,8 +67,8 @@ export default function SettingsPage(){
 				/>
 				<p className = {styles.description}>makes the game easier, but decreases your score.</p>
 			</section>
-			<section className = {homeStyles.buttons}>
-				<Link className = {homeStyles.play} href = "/play">
+			<section className = {playStyles.buttons}>
+				<Link className = {playStyles.play} href = "/play">
 					play now
 				</Link>
 			</section>

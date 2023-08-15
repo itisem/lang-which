@@ -13,6 +13,8 @@
 	--text: #282120;
 	--light: #e0e5e6;
 	--alt-light: #ffffff;
+	--correct: #77dd77;
+	--incorrect: #ff6969;
 }
 
 body{

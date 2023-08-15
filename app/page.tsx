@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
 import styles from "../styles/homepage.module.css";
+import playStyles from "../styles/play-buttons.module.css";
+import Link from "next/link";
 
 export default function Homepage(){
 	return <>
@@ -10,14 +10,14 @@ export default function Homepage(){
 			you receive up to 3 clues per round, with each clue resulting in fewer points.
 			how many of them can you get right?
 		</p>
-		<div className = {styles.buttons}>
-			<Link className = {styles.play} href = "/play">
+		<div className = {playStyles.buttons}>
+			<Link className = {playStyles.play} href = "/play">
 				play now
 			</Link>
-			<span className = {styles.or}>
+			<span className = {playStyles.or}>
 				or
 			</span>
-			<Link className = {styles.settings} href = "/settings">
+			<Link className = {playStyles.settings} href = "/settings">
 				settings
 			</Link>
 		</div>
