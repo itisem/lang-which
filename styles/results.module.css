@@ -2,6 +2,11 @@
 	color: var(--correct);
 }
 
-.incorrect{
+.incorrect .highlight{
 	color: var(--incorrect);
+}
+
+.correct p, .incorrect p{
+	text-align: center;
+	padding-left: 250px;
 }

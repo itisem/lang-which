@@ -15,16 +15,25 @@
 .suggested{
 	margin-top: 5px;
 	height: 30px;
-	overflow: hidden;
 	white-space: nowrap;
+	overflow: hidden;
 }
 
-.suggested div{
+.individual{
 	display: inline-block;
-	margin: 0px 3px;
+	margin: 0px 6px;
 	padding: 3px;
 	border-radius: 3px;
 	background-color: var(--light-highlight);
 	border: 1px solid var(--highlight);
 	cursor: pointer;
+	color: var(--background);
+}
+
+.label{
+	display: inline-block;
+	padding-top: 3px;
+	margin-right: 6px;
+	vertical-align: top;
+	font-weight: bold;
 }

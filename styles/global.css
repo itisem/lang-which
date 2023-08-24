@@ -6,13 +6,15 @@
 }
 
 :root{
-	--background: #f8efe5;
-	--highlight: #bb6622;
-	--alt-highlight: #904e1a;
-	--light-highlight: #d6a37a;
-	--text: #282120;
+	--background: #2a1b3d;
+	--alt-background: #a88bcc;
+	--tint-background: #8265a7;
+	--alt-tint-background: #44318d;
+	--highlight: #d83f87;
+	--alt-highlight: #a72260;
+	--light-highlight: #e991ba;
+	--text: #dddddd;
 	--light: #e0e5e6;
-	--alt-light: #ffffff;
 	--correct: #77dd77;
 	--incorrect: #ff6969;
 }
@@ -115,4 +117,9 @@ details[open] > summary ~ *{
 		opacity: 1;
 		transform: translateY(0px);
 	}
+}
+
+button{
+	cursor: pointer;
+	border: 0px solid var(--alt-background);
 }

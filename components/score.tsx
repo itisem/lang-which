@@ -1,5 +1,7 @@
 import styles from "../styles/score.module.css";
 
+import {useEffect} from "react";
+
 interface ScoreProps{
 	info: {
 		points: number;

@@ -23,7 +23,7 @@
 
 .play:hover{
 	background: var(--alt-highlight);
-	color: var(--alt-light);
+	color: var(--alt-background);
 }
 
 .settings{

@@ -1,0 +1,11 @@
+.draggable{
+	display: inline-block;
+	overflow: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	width: 100%;
+}
+
+.draggable::-webkit-scrollbar{
+	display: none;
+}

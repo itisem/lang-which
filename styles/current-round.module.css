@@ -53,24 +53,23 @@
 	float: left;
 	transition: all 0.2s;
 	cursor: pointer;
-	margin-top: 1px;
+	background: var(--tint-background);
 }
 
 .play:hover, .pause:hover{
-	filter: brightness(80%);
+	background: var(--alt-tint-background);
 }
 
 .play{
-	background: url("/play.svg");
-	background-size: 20px 20px;
-	background-repeat: no-repeat;
+	mask: url("/play.svg") center/contain;
+	-webkit-mask: url("/play.svg") center/contain;
 }
 
 .pause{
-	background: url("/pause.svg");
-	background-size: 20px 20px;
-	background-repeat: no-repeat;
+	mask: url("/pause.svg") center/contain;
+	-webkit-mask: url("/pause.svg") center/contain;
 }
+
 
 /* removing default styling and adding some transitions */
 .slider{
@@ -83,6 +82,7 @@
 	overflow: hidden;
 	float: right;
 	cursor: pointer;
+	margin-top: 3px;
 
 	--track-size: 15px;
 }
@@ -92,24 +92,35 @@
 }
 
 .slider::-moz-range-track{
-	background: var(--light-highlight);
+	background: var(--tint-background);
 	height: var(--track-size);
 	border-radius: var(--track-size);
+	transition: 0.2s background;
 }
 
 .slider::-webkit-slider-runnable-track{
-	background: var(--light-highlight);
+	background: var(--tint-background);
 	height: var(--track-size);
 	border-radius: var(--track-size);
+	transition: 0.2s background;
+}
+
+.slider:hover::-moz-range-track{
+	background: var(--alt-tint-background);
+}
+
+.slider:hover::-webkit-slider-runnable-track{
+	background: var(--alt-tint-background);
 }
 
 .slider::-moz-range-thumb{
 	height: var(--track-size);
 	width: var(--track-size);
-	background-color: var(--highlight);
+	background: var(--highlight);
 	border-radius: 50%;
 	border: 1px solid var(--highlight);
 	box-shadow: -2007px 0 0 2000px var(--highlight);
+	transition: 0.2s all;
 }
 
 .slider::-webkit-slider-thumb{
@@ -117,10 +128,23 @@
 	appearance: none;
 	height: var(--size);
 	width: var(--size);
-	background-color: var(--highlight);
+	background: var(--highlight);
 	border-radius: 50%;
 	border: 1px solid var(--highlight);
 	box-shadow: -2007px 0 0 2000px var(--highlight);
+	transition: 0.2s all;
+}
+
+.slider:hover::-moz-range-thumb{
+	background: var(--alt-highlight);
+	border: 1px solid var(--alt-highlight);
+	box-shadow: -2007px 0 0 2000px var(--alt-highlight);
+}
+
+.slider:hover::-webkit-slider-thumb{
+	background: var(--alt-highlight);
+	border: 1px solid var(--alt-highlight);
+	box-shadow: -2007px 0 0 2000px var(--alt-highlight);
 }
 
 .slider:active::-moz-range-track, .slider:active::-moz-range-thumb{

@@ -5,6 +5,7 @@ import supabase from "../lib/supabase";
 import getItem from "../lib/get-item";
 import {defaultDifficulty} from "../lib/default-settings";
 import difficultyNumbers from "../lib/difficulty-numbers";
+import Draggable from "./draggable";
 
 interface GuessInputProps{
 	callback: (guess: string) => void;
@@ -53,15 +54,21 @@ export default function GuessInput({callback}: GuessInputProps){
 			{searchText === "" ? <i>start typing to get suggested languages</i> :
 				suggestions.length > 0 ?
 					<>
-						<b>suggested:</b>
-						{suggestions.map(suggestion => <>
-							<div key = {suggestion} onClick = {() => {
-								setSearchText("");
-								callback(suggestion);
-							}}>
-								{suggestion}
-							</div>
-						</>)}
+						<span className = {styles.label}>suggested:</span>
+						<Draggable>
+							{suggestions.map(suggestion => <>
+								<div
+									key = {suggestion}
+									onClick = {() => {
+										setSearchText("");
+										callback(suggestion);
+									}}
+									className = {styles.individual}
+								>
+									{suggestion}
+								</div>
+							</>)}
+						</Draggable>
 					</>
 					: <i>no matching language found</i>
 			}
