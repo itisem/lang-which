@@ -1,11 +1,11 @@
 .logo{
-	font-size: 25px;
-	vertical-align: center;
+	margin-right: 10px;
 }
 
-.logo img{
-	margin-left: 50px;
-	margin-right: 10px;
+@media(max-width: 1500px){
+	.logo{
+		margin-left: 50px;
+	}
 }
 
 .container, .footer{
@@ -36,7 +36,7 @@
 	cursor: pointer;
 	border-top: 1px solid var(--highlight);
 	border-bottom: 1px solid var(--highlight);
-	margin: 10px;
+	margin: 7px;
 }
 
 .midline{
@@ -52,7 +52,7 @@
 .footer{
 	margin-top: 50px;
 	padding-top: 10px;
-	border-top: 1px solid var(--light);
+	border-top: 1px solid var(--alt-background);
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr;
 	list-style-type: none;

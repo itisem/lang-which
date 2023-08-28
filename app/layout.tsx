@@ -12,8 +12,7 @@ export default function Layout({children}: LayoutProps){
 		<body>
 			<main className = {styles.container}>
 				<Link href = "/" className = {styles.logo}>
-					<img src = "/logo.png" width = {22} height = {22} />
-					lang.which
+					<img src = "/logo.png" width = {27} height = {27} />
 				</Link>
 				{children}
 			</main>
