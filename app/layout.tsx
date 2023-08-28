@@ -47,7 +47,7 @@ export default function Layout({children}: LayoutProps){
 			<footer className = {styles.footer}>
 				<div>
 					<ul>
-						<img src = "/logo.png" width = {15} height = {15} /> lang.which
+						<img src = "/logo.png" width = {20} height = {20} /> lang.which
 					</ul>
 					<ul>
 						<a href = "https://langwhich.instatus.com/">website status</a>

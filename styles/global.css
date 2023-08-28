@@ -28,6 +28,11 @@ body{
 	top: 0px;
 }
 
+::selection{
+	background: var(--highlight);
+	color: var(--background);
+}
+
 a{
 	color: var(--highlight);
 	text-decoration: none;
