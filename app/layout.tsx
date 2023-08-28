@@ -10,37 +10,10 @@ interface LayoutProps{
 export default function Layout({children}: LayoutProps){
 	return <html lang = "en">
 		<body>
-			<header className = {styles.header}>
-				<input type = "checkbox" id = "menu-toggle" className = {styles.checkbox} />
-				<label htmlFor = "menu-toggle" className = {styles.lines}>
-					<span className = {styles.line1}></span>
-					<span className = {styles.line2}></span>
-					<span className = {styles.line3}></span>
-				</label>
-				<menu className = {styles.menu}>
-					<li>
-						<Link href = "/"><b>lang.which</b></Link>
-					</li>
-					<li>
-						<Link href = "/play">play</Link>
-					</li>
-					<li>
-						<Link href = "/settings">settings</Link>
-					</li>
-					<li>
-						<Link href = "/submit">submit</Link>
-					</li>
-					<li>
-						<Link href = "/statistics">statistics</Link>
-					</li>
-					<li>
-						<Link href = "/about">about</Link>
-					</li>
-				</menu>
-			</header>
 			<main className = {styles.container}>
-				<Link href = "/">
-					<img src = "/logo.png" width = {30} height = {30} />
+				<Link href = "/" className = {styles.logo}>
+					<img src = "/logo.png" width = {22} height = {22} />
+					lang.which
 				</Link>
 				{children}
 			</main>
@@ -88,6 +61,32 @@ export default function Layout({children}: LayoutProps){
 					</ul>
 				</div>
 			</footer>
+			<header className = {styles.header}>
+				<input type = "checkbox" id = "menu-toggle" className = {styles.checkbox} />
+				<label htmlFor = "menu-toggle" className = {styles.lines}>
+					<span className = {styles.midline}></span>
+				</label>
+				<menu className = {styles.menu}>
+					<li>
+						<Link href = "/"><b>lang.which</b></Link>
+					</li>
+					<li>
+						<Link href = "/play">play</Link>
+					</li>
+					<li>
+						<Link href = "/settings">settings</Link>
+					</li>
+					<li>
+						<Link href = "/submit">submit</Link>
+					</li>
+					<li>
+						<Link href = "/statistics">statistics</Link>
+					</li>
+					<li>
+						<Link href = "/about">about</Link>
+					</li>
+				</menu>
+			</header>
 		</body>
 	</html>
 }
