@@ -5,11 +5,21 @@
 
 .container{
 	margin-top: 5px;
+	min-height: calc(100vh - 300px);
 }
 
 .header{
 	margin: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
 }
+
+.header input[type = "checkbox"]{
+	display: none;
+}
+
+
 
 .footer{
 	margin-top: 50px;
@@ -42,27 +52,4 @@
 
 .menu a:hover{
 	color: var(--light);
-}
-
-@media(min-width: 1200px){
-	.menu{
-		display: flex;
-		transform: translateX(0px);
-		height: 20px;
-		top: 0px;
-		width: 100vw;
-		background: var(--highlight);
-	}
-
-	.menu li{
-		margin: 0px 10px;
-	}
-
-	.menu li:first-child{
-		flex: 1;
-	}
-
-	.lines, .checkbox{
-		display: none;
-	}
 }

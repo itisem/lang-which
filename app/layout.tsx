@@ -39,12 +39,15 @@ export default function Layout({children}: LayoutProps){
 				</menu>
 			</header>
 			<main className = {styles.container}>
+				<Link href = "/">
+					<img src = "/logo.png" width = {30} height = {30} />
+				</Link>
 				{children}
 			</main>
 			<footer className = {styles.footer}>
 				<div>
 					<ul>
-						<img src = "/logo-highlight.png" width = {15} height = {15} /> lang.which
+						<img src = "/logo.png" width = {15} height = {15} /> lang.which
 					</ul>
 					<ul>
 						<a href = "https://langwhich.instatus.com/">website status</a>

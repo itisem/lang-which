@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Homepage(){
 	return <>
-		<h1>lang.which</h1>
+		<h1>lang.which, <span className = {styles.subline}>the best language-guessing game</span></h1>
 		<p className = {styles.description}>
 			<b className = "highlight">lang.which</b> is a game in which you guess languages based on audio and text snippets, maps and more!
 			you receive up to 3 clues per round, with each clue resulting in fewer points.
