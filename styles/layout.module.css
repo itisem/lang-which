@@ -15,6 +15,18 @@
 	margin-top: 50px;
 	padding-top: 10px;
 	border-top: 1px solid var(--light);
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	list-style-type: none;
+}
+
+.gamenav{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.gamenav > *:first-child{
+	grid-column: 1/span 2;
 }
 
 .menu{

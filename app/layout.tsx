@@ -42,8 +42,48 @@ export default function Layout({children}: LayoutProps){
 				{children}
 			</main>
 			<footer className = {styles.footer}>
-				© 2023. lang.which was made by <a href = "https://emily.bz">emily nagy</a> - hire me! 
-				|| <Link href = "/about">about</Link>.
+				<div>
+					<ul>
+						<img src = "/logo-highlight.png" width = {15} height = {15} /> lang.which
+					</ul>
+					<ul>
+						<a href = "https://langwhich.instatus.com/">website status</a>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<b>contact</b>
+					</ul>
+					<ul>
+						&#169; 2023 emily nagy
+					</ul>
+					<ul>
+						<a href = "https://emily.bz">hire me</a>
+					</ul>
+					<ul>
+						<Link href = "/contact">contact</Link>
+					</ul>
+				</div>
+				<div className = {styles.gamenav}>
+					<ul>
+						<b>game</b>
+					</ul>
+					<ul>
+						<Link href = "/play">play</Link>
+					</ul>
+					<ul>
+						<Link href = "/settings">settings</Link>
+					</ul>
+					<ul>
+						<Link href = "/submit">submit</Link>
+					</ul>
+					<ul>
+						<Link href = "/statistics">statistics</Link>
+					</ul>
+					<ul>
+						<Link href = "/about">about</Link>
+					</ul>
+				</div>
 			</footer>
 		</body>
 	</html>
