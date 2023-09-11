@@ -2,6 +2,7 @@ import "../styles/global.css";
 import styles from "../styles/layout.module.css";
 import type {ReactNode} from "react";
 import Link from "next/link";
+import Menu from "../components/menu";
 
 interface LayoutProps{
 	children: ReactNode;
@@ -60,32 +61,7 @@ export default function Layout({children}: LayoutProps){
 					</ul>
 				</div>
 			</footer>
-			<header className = {styles.header}>
-				<input type = "checkbox" id = "menu-toggle" className = {styles.checkbox} />
-				<label htmlFor = "menu-toggle" className = {styles.lines}>
-					<span className = {styles.midline}></span>
-				</label>
-				<menu className = {styles.menu}>
-					<li>
-						<Link href = "/"><b>lang.which</b></Link>
-					</li>
-					<li>
-						<Link href = "/play">play</Link>
-					</li>
-					<li>
-						<Link href = "/settings">settings</Link>
-					</li>
-					<li>
-						<Link href = "/submit">submit</Link>
-					</li>
-					<li>
-						<Link href = "/statistics">statistics</Link>
-					</li>
-					<li>
-						<Link href = "/about">about</Link>
-					</li>
-				</menu>
-			</header>
+			<Menu />
 		</body>
 	</html>
 }
