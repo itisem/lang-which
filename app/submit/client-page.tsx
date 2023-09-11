@@ -37,6 +37,7 @@ export default function Submit(){
 			setErrorMessage(`successfully submitted a clue for the ${language} language.`);
 			setClue("");
 			setLanguage("");
+			resolve(true);
 		}).catch(
 			() => error("database error while submitting, please try again later.")
 		)
