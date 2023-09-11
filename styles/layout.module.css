@@ -40,3 +40,9 @@
 .gamenav > *:first-child{
 	grid-column: 1/span 2;
 }
+
+@media(max-width: 1500px){
+	.footer{
+		display: block;
+	}
+}
