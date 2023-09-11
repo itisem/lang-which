@@ -33,14 +33,17 @@ export default function Submit(){
 			language,
 			clue: clueType,
 			value: realClue
-		}).then(() =>{
-			setErrorMessage(`successfully submitted a clue for the ${language} language.`);
-			setClue("");
-			setLanguage("");
-			resolve(true);
-		}).catch(
-			() => error("database error while submitting, please try again later.")
-		)
+		}).then(
+			(response: any) => {
+				setErrorMessage(`successfully submitted a clue for the ${language} language.`);
+				setClue("");
+				setLanguage("");
+				return Promise.resolve(true);
+			},
+			(error: any) => {
+				() => error("database error while submitting, please try again later.")
+			}
+		);
 	}
 
 	return <div className = {styles.page}>
