@@ -41,3 +41,11 @@
 .submit:hover{
 	background: var(--highlight);
 }
+
+.error{
+	color: var(--incorrect);
+}
+
+.feedback{
+	color: var(--correct);
+}
