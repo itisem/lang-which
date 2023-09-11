@@ -1,0 +1,43 @@
+.page p{
+	text-align: center;
+}
+
+.text{
+	background: var(--light-highlight);
+	border-radius: 5px;
+	padding: 5px;
+	border: 1px solid var(--highlight);
+}
+
+.select{
+	appearance: none;
+	-webkit-appearance: none;
+	width: 0.9em;
+	height: 0.9em;
+	border: 2px solid var(--highlight);
+	border-radius: 50%;
+	transition: 0.2s background;
+	margin-right: 0.25em;
+	cursor: pointer;
+}
+
+.select:checked{
+	background: var(--highlight);
+}
+
+.label{
+	cursor: pointer;
+}
+
+.submit{
+	cursor: pointer;
+	background: var(--light-highlight);
+	border: 1px solid var(--highlight);
+	border-radius: 5px;
+	padding: 5px;
+	transition: 0.2s background;
+}
+
+.submit:hover{
+	background: var(--highlight);
+}
